@@ -1,0 +1,30 @@
+body{
+    background-color: #000000;
+    color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem
+}
+
+.card{
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.card-header{
+    text-align: end;
+    margin: 1rem;
+}
