@@ -35,7 +35,7 @@ async function fetchPokemon(pokemon){
     .then(res => res.json())
     .then(data => {
         const pokemon = {
-            name: data.name,
+            name: data.name.toUpperCase(),
             id: data.id,
             image: data.sprites.front_default,
             type: data.types[0].type.name
