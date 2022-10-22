@@ -1,0 +1,10 @@
+const footer = document.createElement('footer');
+footer.classList.add('footer');
+footer.appendChild(document.createTextNode('Made with ❤️ by '));
+const link = document.createElement('a');
+link.href = 'https://github.com/gm3nd3s';
+link.target = '@gm3nd3s';
+link.classList.add('link');
+link.appendChild(document.createTextNode('@gm3nd3s'));
+footer.appendChild(link);
+document.querySelector('body').appendChild(footer);

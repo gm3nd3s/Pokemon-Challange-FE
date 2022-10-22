@@ -9,11 +9,18 @@ createPokemonCard =  (pokemon) => {
     const name = document.createElement('h2');
     const image = document.createElement('img');
     const xButton = document.createElement('button');
+    const xButtonImg = document.createElement('img');
     card.classList.add('card');
     name.innerText = pokemon.name;
     image.src = pokemon.image;
     image.id = "img_" + pokemon.id;
-    xButton.innerText = 'X';
+    
+    xButtonImg.src = "../assets/cruz.png";
+    xButtonImg.width = 25;
+    xButtonImg.classList.add('xButtonImg');
+    
+    xButton.classList.add('xButton');
+    xButton.appendChild(xButtonImg);
     xButton.addEventListener('click', async () => {
         confirm("Are you sure you want to delete this pokemon?");
         await card.remove();
@@ -22,8 +29,8 @@ createPokemonCard =  (pokemon) => {
     }, false);
 
     card.appendChild(xButton);
-    card.appendChild(name);
     card.appendChild(image);
+    card.appendChild(name);
 
     return card;
 };
